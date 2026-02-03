@@ -34,7 +34,7 @@ export default function Hero() {
                 <SocialLink href="https://github.com/ogayanfe" icon={<Github size={20} />} label="Github" target='_blank'/>
                 <SocialLink href="https://linkedin.com/in/ogayanfe" icon={<Linkedin size={20} />} label="LinkedIn" target='_blank'/>
                 <SocialLink href="https://x.com/ogayanfe" icon={<Twitter size={20} />} label="Twitter" target='_blank' />
-                <SocialLink href="mailto:ayanfeoluwakoyinsola@gmail.com" icon={<Mail size={20} />} label="Email" target='_blank'/>
+                <SocialLink href="mailto:ogayanfe.me@gmail.com" icon={<Mail size={20} />} label="Email" target='_blank'/>
             </div>
             
             <div className="flex flex-wrap gap-4 pt-4">

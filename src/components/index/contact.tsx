@@ -60,8 +60,8 @@ export default function Contact() {
                 <ContactItem 
                     icon={<Mail size={20} className="text-orange-500" />} 
                     label="Email" 
-                    value="ayanfeoluwakoyinsola@gmail.com" 
-                    href="mailto:ayanfeoluwakoyinsola@gmail.com" 
+                    value="ogayanfe.me@gmail.com" 
+                    href="mailto:ogayanfe.me@gmail.com" 
                 />
                 <ContactItem 
                     icon={<Phone size={20} className="text-orange-500" />} 
