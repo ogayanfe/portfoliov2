@@ -3,7 +3,7 @@
 import { Send, Mail, Phone, MapPin, Github, Linkedin, Twitter, Terminal as TerminalIcon, CheckCircle2, AlertTriangle, Loader2 } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
-import { sendMessage } from "@/app/actions/contact";
+import { sendMessage } from "@/actions/contact";
 
 export default function Contact() {
   const [status, setStatus] = useState<{ type: 'idle' | 'loading' | 'success' | 'error', message: string }>({ type: 'idle', message: '' });
