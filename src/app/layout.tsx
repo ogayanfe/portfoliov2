@@ -14,6 +14,7 @@ const geistMono = Geist_Mono({
 
 const nextHost = process.env.PUBLIC_HOST!;
 export const metadata: Metadata = {
+  metadataBase: new URL(nextHost),
   title: "Odule Ayanfeoluwa | Software Developer",
   description: "Web developer specializing in building accessible, pixel-perfect, and performant web experiences. Focused on modern React ecosystems and scalable web architecture.",
   icons: {
@@ -34,7 +35,7 @@ export const metadata: Metadata = {
     siteName: "Odule Ayanfeoluwa Portfolio",
     images: [
       {
-        url: `${nextHost}/social.png/`,
+        url: "/social.png",
         width: 1200,
         height: 630,
         alt: "Odule Ayanfeoluwa - Portfolio Preview",
@@ -47,7 +48,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Odule Ayanfeoluwa | Software Developer",
     description: "Web developer specializing in building accessible, pixel-perfect, and performant web experiences.",
-    images: [`${nextHost}/social.png/`],
+    images: ["/social.png"],
     creator: "@ogayanfe", 
   },
 };
