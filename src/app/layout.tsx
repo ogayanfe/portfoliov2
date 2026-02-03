@@ -17,6 +17,8 @@ export const metadata: Metadata = {
   metadataBase: new URL(nextHost),
   title: "Odule Ayanfeoluwa | Software Developer",
   description: "Web developer specializing in building accessible, pixel-perfect, and performant web experiences. Focused on modern React ecosystems and scalable web architecture.",
+  authors: [{ name: "Odule Ayanfeoluwa", url: "https://github.com/ogayanfe" }],
+  creator: "Odule Ayanfeoluwa",
   icons: {
     icon: [
       { url: '/favicon.ico' },
