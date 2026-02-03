@@ -1,4 +1,4 @@
-# Odule Ayanfeoluwa – Wb devloper portfolio
+# Odule Ayanfeoluwa – Web devloper portfolio
 
 A high-performance, engineering-centric portfolio designed to showcase technical depth, AI integration, and systems architecture. Built with a "Developer-First" aesthetic, moving beyond simple layouts into immersive, interactive storytelling.
 
