@@ -41,6 +41,28 @@ body {
   animation: float 6s ease-in-out infinite;
 }
 
+@keyframes glitch {
+  0% { transform: translate(0) scale(1); clip-path: inset(0 0 0 0); }
+  20% { transform: translate(-2px, 2px) scale(1.01); clip-path: inset(10% 0 40% 0); }
+  40% { transform: translate(2px, -2px) scale(0.99); clip-path: inset(50% 0 10% 0); }
+  60% { transform: translate(-2px, -1px) scale(1); clip-path: inset(30% 0 20% 0); }
+  80% { transform: translate(2px, 1px) scale(1.02); clip-path: inset(5% 0 70% 0); }
+  100% { transform: translate(0) scale(1); clip-path: inset(0 0 0 0); }
+}
+
+@keyframes scanline {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(400%); }
+}
+
+.animate-glitch {
+  animation: glitch 1s linear infinite;
+}
+
+.animate-scanline {
+  animation: scanline 4s linear infinite;
+}
+
 /* Custom scrollbar for thumb carousel */
 .no-scrollbar::-webkit-scrollbar {
   display: none;
@@ -49,4 +71,5 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
 
