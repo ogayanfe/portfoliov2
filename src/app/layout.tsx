@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Odule Ayanfeoluwa | Software Developer",
-  description: "Web devoper specializing in building accessible, pixel-perfect, and performant web experiences. Focused on modern React ecosystems and scalable web architecture..",
+  description: "Web developer specializing in building accessible, pixel-perfect, and performant web experiences. Focused on modern React ecosystems and scalable web architecture.",
   icons: {
     icon: [
       { url: '/favicon.ico' },
@@ -26,6 +26,29 @@ export const metadata: Metadata = {
     ],
   },
   manifest: '/site.webmanifest',
+  openGraph: {
+    title: "Odule Ayanfeoluwa | Software Developer",
+    description: "Web developer specializing in building accessible, pixel-perfect, and performant web experiences.",
+    url: "https://ogayanfe.netlify.com", 
+    siteName: "Odule Ayanfeoluwa Portfolio",
+    images: [
+      {
+        url: "/social.png",
+        width: 1200,
+        height: 630,
+        alt: "Odule Ayanfeoluwa - Portfolio Preview",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Odule Ayanfeoluwa | Software Developer",
+    description: "Web developer specializing in building accessible, pixel-perfect, and performant web experiences.",
+    images: ["/social.png"],
+    creator: "@ogayanfe", 
+  },
 };
 
 export default function RootLayout({
