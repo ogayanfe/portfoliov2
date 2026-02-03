@@ -25,7 +25,13 @@ export const projects = [
       { label: "Source Code", href: "https://github.com/ogayanfe/websandbox" }
     ],
     figure: <WebsandboxPreview />,
-    color: "blue"
+    color: "blue",
+    gallery: [
+      "/demos/websandbox/1.png", "/demos/websandbox/2.png", "/demos/websandbox/3.png",
+      "/demos/websandbox/4.png", "/demos/websandbox/5.png", "/demos/websandbox/6.png",
+      "/demos/websandbox/7.png", "/demos/websandbox/8.png", "/demos/websandbox/9.png",
+      "/demos/websandbox/10.png"
+    ]
   },
   {
     id: "birdie",
@@ -43,7 +49,11 @@ export const projects = [
       { label: "Source Code", href: "https://github.com/ogayanfe/birdie" }
     ],
     figure: <BirdieVisual />,
-    color: "purple"
+    color: "purple",
+    gallery: [
+      "/demos/birdie/1.png", "/demos/birdie/2.png", "/demos/birdie/3.png",
+      "/demos/birdie/4.png", "/demos/birdie/5.png", "/demos/birdie/6.png"
+    ]
   },
   {
     id: "botstore",
@@ -74,11 +84,15 @@ export const projects = [
     ],
     techStack: ["TypeScript", "Gemini AI", "Web Audio API", "PWA"],
     links: [
-      { label: "Live Demo", href: "https://gani-ai.vercel.app/", primary: true },
+      { label: "Live Demo", href: "https://gani-ai-app.netlify.app/", primary: true },
       { label: "Source Code", href: "https://github.com/ogayanfe/ganibot" }
     ],
     figure: <GaniSchema />,
-    color: "orange"
+    color: "orange",
+    gallery: [
+      "/demos/gani/1.png", "/demos/gani/2.png", "/demos/gani/3.png",
+      "/demos/gani/4.png", "/demos/gani/5.png", "/demos/gani/6.png"
+    ]
   },
   {
     id: "django-chat",
@@ -95,7 +109,10 @@ export const projects = [
       { label: "Source Code", href: "https://github.com/ogayanfe/django-chat-app" }
     ],
     figure: <ChatVisual />,
-    color: "amber"
+    color: "amber",
+    gallery: [
+      "/demos/django-chat-application/1.png"
+    ]
   },
   {
     id: "hausa-tts",

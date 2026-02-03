@@ -1,14 +1,36 @@
 "use client";
 
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ChevronDown, ChevronUp, Image as ImageIcon } from "lucide-react";
 import Link from "next/link";
-import { ChevronDown, ChevronUp } from "lucide-react";
 import { useState } from "react";
 import { projects } from "../projects/data";
+import GalleryOverlay from "../projects/GalleryOverlay";
+
+interface ProjectLink {
+  label: string;
+  href: string;
+  primary?: boolean;
+}
 
 export default function Projects() {
   const [showAll, setShowAll] = useState(false);
+  const [activeGallery, setActiveGallery] = useState<{ isOpen: boolean; images: string[]; name: string; color: string }>({
+    isOpen: false,
+    images: [],
+    name: '',
+    color: ''
+  });
+
   const displayedProjects = showAll ? projects : projects.slice(0, 3);
+
+  const openGallery = (project: any) => {
+    setActiveGallery({
+        isOpen: true,
+        images: project.gallery || [],
+        name: project.title,
+        color: project.color
+    });
+  };
 
   return (
     <section id="projects" className="py-24 relative overflow-hidden">
@@ -62,7 +84,7 @@ export default function Projects() {
                   </div>
 
                   <div className="pt-4 flex flex-wrap gap-4">
-                      {project.links.map(link => (
+                      {project.links.map((link: ProjectLink) => (
                         <Link 
                           key={link.label} 
                           href={link.href} 
@@ -87,6 +109,25 @@ export default function Projects() {
                {/* Figure Visual */}
                <div className={`lg:col-span-7 bg-zinc-900/30 border border-zinc-800 p-8 rounded-sm relative group overflow-hidden ${index % 2 === 1 ? 'order-1' : 'order-1 lg:order-2'}`}>
                   {project.figure}
+
+                  {/* Gallery Trigger Badge */}
+                  {project.gallery && project.gallery.length > 0 && (
+                    <button 
+                        onClick={() => openGallery(project)}
+                        className={`absolute bottom-4 right-4 z-20 flex items-center gap-2 px-3 py-1.5 border bg-zinc-950 font-mono text-[10px] uppercase tracking-wider transition-all hover:scale-105 active:scale-95 ${
+                            project.color === 'orange' ? 'border-orange-500/30 text-orange-500 hover:border-orange-500/60 shadow-[0_0_15px_rgba(249,115,22,0.1)]' : 
+                            project.color === 'blue' ? 'border-blue-500/30 text-blue-500 hover:border-blue-500/60 shadow-[0_0_15px_rgba(59,130,246,0.1)]' : 
+                            project.color === 'purple' ? 'border-purple-500/30 text-purple-500 hover:border-purple-500/60 shadow-[0_0_15px_rgba(168,85,247,0.1)]' : 
+                            project.color === 'emerald' ? 'border-emerald-500/30 text-emerald-500 hover:border-emerald-500/60 shadow-[0_0_15px_rgba(16,185,129,0.1)]' : 
+                            project.color === 'amber' ? 'border-amber-500/30 text-amber-500 hover:border-amber-500/60 shadow-[0_0_15px_rgba(245,158,11,0.1)]' : 
+                            'border-indigo-500/30 text-indigo-500 hover:border-indigo-500/60 shadow-[0_0_15px_rgba(99,102,241,0.1)]'
+                        }`}
+                    >
+                        <ImageIcon size={12} />
+                        [ Preview_UI ] // {String(project.gallery.length).padStart(2, '0')}_assets
+                    </button>
+                  )}
+
                   {/* Background Grid inside card */}
                   <div className="absolute inset-0 bg-[linear-gradient(to_right,#27272a_1px,transparent_1px),linear-gradient(to_bottom,#27272a_1px,transparent_1px)] bg-[size:20px_20px] opacity-10 -z-0 pointer-events-none" />
                </div>
@@ -110,8 +151,18 @@ export default function Projects() {
             </button>
         </div>
       </div>
+
+      {/* Gallery Overlay */}
+      <GalleryOverlay 
+        isOpen={activeGallery.isOpen}
+        onClose={() => setActiveGallery(prev => ({ ...prev, isOpen: false }))}
+        images={activeGallery.images}
+        projectName={activeGallery.name}
+        projectColor={activeGallery.color}
+      />
     </section>
   );
 }
+
 
 
