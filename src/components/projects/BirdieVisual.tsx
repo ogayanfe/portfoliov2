@@ -1,14 +1,11 @@
-"use client";
-
 import { Heart, MessageCircle, Share2, UserPlus } from "lucide-react";
+import { FigureContainer } from "./shared";
 
 export default function BirdieVisual() {
   return (
-    <div className="flex items-center justify-center h-full relative z-10 w-full p-4">
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-transparent" />
-        
+    <FigureContainer color="purple">
         {/* Social Feed Mockup */}
-        <div className="w-full max-w-sm space-y-4">
+        <div className="w-full max-w-sm space-y-4 scale-90 md:scale-100">
             {/* Post Card 1 */}
             <div className="bg-zinc-950 border border-zinc-800 rounded-lg p-4 shadow-2xl transform -rotate-2 hover:rotate-0 transition-transform duration-500">
                 <div className="flex items-center gap-3 mb-3">
@@ -48,6 +45,6 @@ export default function BirdieVisual() {
         <div className="absolute top-4 right-4 bg-purple-500/10 border border-purple-500/30 px-2 py-1 rounded font-mono text-[9px] text-purple-400 uppercase tracking-widest animate-pulse">
             Real-time Feed
         </div>
-    </div>
+    </FigureContainer>
   );
 }

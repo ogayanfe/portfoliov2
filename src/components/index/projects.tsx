@@ -106,8 +106,8 @@ export default function Projects() {
                   </div>
                </div>
 
-               {/* Figure Visual */}
-               <div className={`lg:col-span-7 bg-zinc-900/30 border border-zinc-800 p-8 rounded-sm relative group overflow-hidden ${index % 2 === 1 ? 'order-1' : 'order-1 lg:order-2'}`}>
+               {/* Figure Visual Container */}
+               <div className={`lg:col-span-7 bg-zinc-900/30 border border-zinc-800 rounded-sm relative group overflow-hidden ${index % 2 === 1 ? 'order-1' : 'order-1 lg:order-2'}`}>
                   {project.figure}
 
                   {/* Gallery Trigger Badge */}
@@ -127,9 +127,6 @@ export default function Projects() {
                         [ Preview_UI ] // {String(project.gallery.length).padStart(2, '0')}_assets
                     </button>
                   )}
-
-                  {/* Background Grid inside card */}
-                  <div className="absolute inset-0 bg-[linear-gradient(to_right,#27272a_1px,transparent_1px),linear-gradient(to_bottom,#27272a_1px,transparent_1px)] bg-[size:20px_20px] opacity-10 -z-0 pointer-events-none" />
                </div>
             </div>
           ))}

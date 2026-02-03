@@ -1,14 +1,11 @@
-"use client";
-
 import { Activity, Database, FileAudio, ArrowRight } from "lucide-react";
+import { FigureContainer } from "./shared";
 
 export default function TtsServerVisual() {
   return (
-    <div className="flex items-center justify-center h-full relative z-10 w-full p-6">
-        <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/10 to-transparent" />
-        
+    <FigureContainer color="indigo">
         {/* API Microservice Mockup */}
-        <div className="w-full max-w-md bg-zinc-950/80 border border-zinc-800 rounded shadow-2xl overflow-hidden font-mono">
+        <div className="w-full max-w-md bg-zinc-950/80 border border-zinc-800 rounded shadow-2xl overflow-hidden font-mono scale-90 md:scale-100">
             {/* Endpoint Bar */}
             <div className="bg-zinc-900/50 p-2 px-3 border-b border-zinc-800 flex items-center justify-between">
                 <div className="flex items-center gap-2">
@@ -55,6 +52,6 @@ export default function TtsServerVisual() {
                 </div>
             </div>
         </div>
-    </div>
+    </FigureContainer>
   );
 }

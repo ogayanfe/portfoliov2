@@ -1,14 +1,11 @@
-"use client";
-
 import { MessageSquare, Zap, User, Clock } from "lucide-react";
+import { FigureContainer } from "./shared";
 
 export default function ChatVisual() {
   return (
-    <div className="flex items-center justify-center h-full relative z-10 w-full p-6">
-        <div className="absolute inset-0 bg-gradient-to-br from-amber-500/10 to-transparent" />
-        
+    <FigureContainer color="amber">
         {/* Chat Stream Visualization */}
-        <div className="w-full max-w-sm space-y-3">
+        <div className="w-full max-w-sm space-y-3 scale-90 md:scale-100">
             {/* WebSocket Connection Badge */}
             <div className="flex items-center gap-2 font-mono text-[9px] text-amber-500/70 mb-4 self-start">
                 <Zap size={10} className="animate-pulse" />
@@ -44,6 +41,6 @@ export default function ChatVisual() {
                 </div>
             </div>
         </div>
-    </div>
+    </FigureContainer>
   );
 }

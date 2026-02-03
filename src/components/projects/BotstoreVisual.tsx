@@ -1,14 +1,11 @@
-"use client";
-
 import { Bot, ShoppingCart, CheckCircle2, Layout } from "lucide-react";
+import { FigureContainer } from "./shared";
 
 export default function BotstoreVisual() {
   return (
-    <div className="flex items-center justify-center h-full relative z-10 w-full p-4">
-        <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/10 to-transparent" />
-        
+    <FigureContainer color="emerald">
         {/* Marketplace Dashboard Mockup */}
-        <div className="w-full max-w-sm bg-zinc-950 border border-zinc-800 rounded-sm overflow-hidden shadow-2xl">
+        <div className="w-full max-w-sm bg-zinc-950 border border-zinc-800 rounded-sm overflow-hidden shadow-2xl scale-90 md:scale-100">
             {/* Header */}
             <div className="border-b border-zinc-800 p-3 bg-zinc-900/50 flex items-center justify-between">
                 <div className="flex items-center gap-2">
@@ -39,7 +36,7 @@ export default function BotstoreVisual() {
                 </div>
             </div>
         </div>
-    </div>
+    </FigureContainer>
   );
 }
 
