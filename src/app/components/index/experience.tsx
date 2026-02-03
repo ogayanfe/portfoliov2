@@ -9,7 +9,7 @@ const experiences = [
     company: "Self-Employed",
     date: "Nov 2024 — Present",
     status: "Active",
-    tech: ["Next.js", "AI Integration", "Cloud Deployment"],
+    tech: ["Next.js", "AI Integration", "Cloud Deployment", "Django"],
     logs: [
       "Designing and deploying full-stack web solutions for various clients, focusing on scalability and performance.",
       "Integrating AI features such as Large Language Models (LLMs) and Text-to-Speech (TTS) into web applications.",
@@ -49,7 +49,7 @@ export default function Experience() {
           <div className="h-px bg-zinc-800 flex-grow" />
         </div>
 
-        <div className="flex flex-col space-y-12">
+        <div className="flex flex-col space-y-12 lg:mr-20">
           {experiences.map((exp, index) => (
             <div key={exp.id} className="group relative">
                 {/* Connector Line */}
