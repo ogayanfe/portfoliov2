@@ -1,0 +1,9 @@
+<!-- Use this file to provide workspace-specific custom instructions to Copilot. For more details, visit https://code.visualstudio.com/docs/copilot/copilot-customization#_use-a-githubcopilotinstructionsmd-file -->
+
+## Execution Guidelines
+
+## Execution Guidelines
+
+- Work through each checklist item systematically.
+- Keep communication concise and focused.
+- Follow development best practices.
