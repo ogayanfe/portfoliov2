@@ -37,7 +37,7 @@ export default function Hackathon() {
                 </h2>
                 
                 <p className="text-zinc-400 text-lg leading-relaxed border-l-2 border-zinc-800 pl-4">
-                    Participated in the world's longest online hackathon attempt. Selected as one of the <strong>Top 12 Teams</strong> out of a massive competitive pool for the development of <span className="text-orange-500 font-mono">GANI</span>.
+                    Participated in the world&apos;s longest online hackathon attempt. Selected as one of the <strong>Top 12 Teams</strong> out of a massive competitive pool for the development of <span className="text-orange-500 font-mono">GANI</span>.
                 </p>
 
                 <div className="flex flex-col gap-3 mt-2">

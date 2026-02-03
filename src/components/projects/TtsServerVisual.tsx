@@ -1,4 +1,4 @@
-import { Activity, Database, FileAudio, ArrowRight } from "lucide-react";
+import { Database, FileAudio, ArrowRight } from "lucide-react";
 import { FigureContainer } from "./shared";
 
 export default function TtsServerVisual() {
@@ -23,9 +23,9 @@ export default function TtsServerVisual() {
                 {/* Input Payload */}
                 <div className="w-full bg-zinc-900/50 p-2 rounded border border-zinc-800 text-[9px] text-zinc-500">
                     <span className="text-indigo-400">{"{"}</span><br />
-                    &nbsp;&nbsp;"text": "Ina kwana",<br />
-                    &nbsp;&nbsp;"lang": "ha",<br />
-                    &nbsp;&nbsp;"format": "wav"<br />
+                    &nbsp;&nbsp;&quot;text&quot;: &quot;Ina kwana&quot;,<br />
+                    &nbsp;&nbsp;&quot;lang&quot;: &quot;ha&quot;,<br />
+                    &nbsp;&nbsp;&quot;format&quot;: &quot;wav&quot;<br />
                     <span className="text-indigo-400">{"}"}</span>
                 </div>
 

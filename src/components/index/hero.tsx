@@ -128,7 +128,7 @@ function CodeTerminal() {
 function CodeSnippet() {
     return (
         <div className="text-zinc-300 whitespace-nowrap">
-            <div><span className="text-purple-400">import</span> {"{ motion }"} <span className="text-purple-400">from</span> <span className="text-green-400">"framer-motion"</span>;</div>
+            <div><span className="text-purple-400">import</span> {"{ motion }"} <span className="text-purple-400">from</span> <span className="text-green-400">&quot;framer-motion&quot;</span>;</div>
             <div className="h-5" />
             <div><span className="text-purple-400">interface</span> <span className="text-yellow-400">Props</span> {"{"}</div>
             <div className="pl-4">children: React.ReactNode;</div>

@@ -1,4 +1,4 @@
-import { MessageSquare, Zap, User, Clock } from "lucide-react";
+import { Zap, User, Clock } from "lucide-react";
 import { FigureContainer } from "./shared";
 
 export default function ChatVisual() {

@@ -23,7 +23,7 @@ export default function Projects() {
 
   const displayedProjects = showAll ? projects : projects.slice(0, 3);
 
-  const openGallery = (project: any) => {
+  const openGallery = (project: typeof projects[0]) => {
     setActiveGallery({
         isOpen: true,
         images: project.gallery || [],
@@ -151,6 +151,7 @@ export default function Projects() {
 
       {/* Gallery Overlay */}
       <GalleryOverlay 
+        key={activeGallery.name}
         isOpen={activeGallery.isOpen}
         onClose={() => setActiveGallery(prev => ({ ...prev, isOpen: false }))}
         images={activeGallery.images}

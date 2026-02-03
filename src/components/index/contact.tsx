@@ -29,7 +29,7 @@ export default function Contact() {
       } else {
         setStatus({ type: 'error', message: result.message });
       }
-    } catch (error) {
+    } catch {
       setStatus({ type: 'error', message: 'System fault. Uplink aborted.' });
     }
   };
@@ -151,7 +151,7 @@ export default function Contact() {
             
             <div className="flex gap-8 text-[10px] font-mono text-zinc-500 uppercase tracking-widest">
                 <button onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})} className="hover:text-orange-500 transition-colors cursor-pointer">Return to Root</button>
-                <span>Built with Next.js 15</span>
+                <Link href="https://github.com/ogayanfe/portfoliov2" target="_blank" className="hover:text-orange-500 transition-colors">Source Code</Link>
             </div>
         </footer>
       </div>
@@ -175,8 +175,8 @@ function Field({ label, id, type, placeholder, value, onChange }: { label?: stri
     )
 }
 
-function ContactItem({ icon, label, value, href }: { icon: any, label: string, value: string, href?: string }) {
-    const Content = () => (
+function ContactItem({ icon, label, value, href }: { icon: React.ReactNode, label: string, value: string, href?: string }) {
+    const content = (
         <div className="group flex items-center gap-6 p-4 border border-zinc-800 bg-zinc-900/10 rounded-sm hover:border-orange-500/30 transition-all">
             <div className="w-10 h-10 rounded-full bg-zinc-950 flex items-center justify-center border border-zinc-800 group-hover:bg-orange-500 group-hover:border-orange-400 group-hover:text-zinc-950 transition-all duration-500">
                 {icon}
@@ -188,6 +188,6 @@ function ContactItem({ icon, label, value, href }: { icon: any, label: string, v
         </div>
     )
 
-    if (href) return <Link href={href} className="block">{Content()}</Link>
-    return <Content />
+    if (href) return <Link href={href} className="block">{content}</Link>
+    return content
 }

@@ -1,6 +1,6 @@
 "use client";
 
-import { X, ChevronLeft, ChevronRight, Maximize2, Terminal } from "lucide-react";
+import { X, ChevronLeft, ChevronRight, Terminal } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
@@ -19,7 +19,6 @@ export default function GalleryOverlay({ isOpen, onClose, images, projectName, p
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
-      setCurrentIndex(0);
     } else {
       document.body.style.overflow = "auto";
     }

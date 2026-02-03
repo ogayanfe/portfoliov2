@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Terminal, Home, AlertTriangle, ArrowLeft } from "lucide-react";
+import { Terminal, Home, ArrowLeft } from "lucide-react";
 
 export default function NotFound() {
   return (
@@ -57,7 +57,7 @@ export default function NotFound() {
                 </p>
                 <p className="flex gap-3 pt-2 text-zinc-500 italic">
                     <span className="text-zinc-700">&gt;</span>
-                    <span>"The page you are looking for has been moved or deleted."</span>
+                    <span>&quot;The page you are looking for has been moved or deleted.&quot;</span>
                 </p>
                 <p className="animate-pulse pt-1">_</p>
             </div>

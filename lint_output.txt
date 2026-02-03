@@ -1,0 +1,107 @@
+
+> portfoliov2@0.1.0 lint
+> eslint
+
+
+C:\Users\Dell\Desktop\projects\portfoliov2\src\app\not-found.tsx
+   4:26  warning  'AlertTriangle' is defined but never used                        @typescript-eslint/no-unused-vars
+  60:27  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  60:83  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+
+C:\Users\Dell\Desktop\projects\portfoliov2\src\components\index\contact.tsx
+   32:14  warning  'error' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         @typescript-eslint/no-unused-vars
+  178:60  error    Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  @typescript-eslint/no-explicit-any
+  192:13  error    Error: Cannot create components during render
+
+Components created during render will reset their state each time they are created. Declare components outside of render.
+
+C:\Users\Dell\Desktop\projects\portfoliov2\src\components\index\contact.tsx:192:13
+  190 |
+  191 |     if (href) return <Link href={href} className="block">{Content()}</Link>
+> 192 |     return <Content />
+      |             ^^^^^^^ This component is created during render
+  193 | }
+  194 |
+
+C:\Users\Dell\Desktop\projects\portfoliov2\src\components\index\contact.tsx:179:21
+  177 |
+  178 | function ContactItem({ icon, label, value, href }: { icon: any, label: string, value: string, href?: string }) {
+> 179 |     const Content = () => (
+      |                     ^^^^^^^
+> 180 |         <div className="group flex items-center gap-6 p-4 border border-zinc-800 bg-zinc-900/10 rounded-sm hover:border-orange-500/30 transition-all">
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 181 |             <div className="w-10 h-10 rounded-full bg-zinc-950 flex items-center justify-center border border-zinc-800 group-hover:bg-orange-500 group-hover:border-orange-400 group-hover:text-zinc-950 transition-all duration-500">
+      …
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 188 |         </div>
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 189 |     )
+      | ^^^^^^ The component is created during render here
+  190 |
+  191 |     if (href) return <Link href={href} className="block">{Content()}</Link>
+  192 |     return <Content />  react-hooks/static-components
+
+C:\Users\Dell\Desktop\projects\portfoliov2\src\components\index\hackathon.tsx
+  40:46  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+C:\Users\Dell\Desktop\projects\portfoliov2\src\components\index\hero.tsx
+  131:160  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  131:174  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+
+C:\Users\Dell\Desktop\projects\portfoliov2\src\components\index\projects.tsx
+  26:33  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\Users\Dell\Desktop\projects\portfoliov2\src\components\projects\ChatVisual.tsx
+  1:10  warning  'MessageSquare' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\Dell\Desktop\projects\portfoliov2\src\components\projects\GalleryOverlay.tsx
+   3:40  warning  'Maximize2' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               @typescript-eslint/no-unused-vars
+  22:7   error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\Dell\Desktop\projects\portfoliov2\src\components\projects\GalleryOverlay.tsx:22:7
+  20 |     if (isOpen) {
+  21 |       document.body.style.overflow = "hidden";
+> 22 |       setCurrentIndex(0);
+     |       ^^^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  23 |     } else {
+  24 |       document.body.style.overflow = "auto";
+  25 |     }  react-hooks/set-state-in-effect
+
+C:\Users\Dell\Desktop\projects\portfoliov2\src\components\projects\TtsServerVisual.tsx
+   1:10  warning  'Activity' is defined but never used                             @typescript-eslint/no-unused-vars
+  26:33  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  26:38  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  26:41  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  26:51  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  27:33  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  27:38  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  27:41  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  27:44  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  28:33  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  28:40  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  28:43  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  28:47  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+
+C:\Users\Dell\Desktop\projects\portfoliov2\src\components\projects\shared.tsx
+  42:36  error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+C:\Users\Dell\Desktop\projects\portfoliov2\src\components\projects\shared.tsx:42:36
+  40 |                     </div>
+  41 |                     <div className="absolute bottom-1 right-2 font-mono text-[7px] text-zinc-600 uppercase tracking-tighter hidden md:block">
+> 42 |                         REF_ID: 0x{Math.random().toString(16).slice(2, 6).toUpperCase()}
+     |                                    ^^^^^^^^^^^^^ Cannot call impure function
+  43 |                     </div>
+  44 |                 </div>
+  45 |  react-hooks/purity
+  56:11  error  Unexpected any. Specify a different type                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 @typescript-eslint/no-explicit-any
+
+✖ 28 problems (23 errors, 5 warnings)
+

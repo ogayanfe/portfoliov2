@@ -39,7 +39,7 @@ export function FigureContainer({
                         SYS_MOD // {color?.toUpperCase()}_STRATUM
                     </div>
                     <div className="absolute bottom-1 right-2 font-mono text-[7px] text-zinc-600 uppercase tracking-tighter hidden md:block">
-                        REF_ID: 0x{Math.random().toString(16).slice(2, 6).toUpperCase()}
+                        REF_ID: 0xFC2A
                     </div>
                 </div>
 
@@ -53,7 +53,7 @@ export function FigureContainer({
 }
 
 export function FlowItem({ icon, label, highlight = false, color = "orange" }: { 
-    icon: any, 
+    icon: React.ReactNode, 
     label: string, 
     highlight?: boolean, 
     color?: string 
