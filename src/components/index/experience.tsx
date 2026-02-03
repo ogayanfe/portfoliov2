@@ -18,6 +18,19 @@ const experiences = [
   },
   {
     id: "exp_02",
+    role: "Bootcamp Instructor",
+    company: "IPING IT Solutions",
+    date: "Jun 2025 — Aug 2025",
+    status: "Completed",
+    tech: ["JavaScript", "Teaching", "Mentorship"],
+    logs: [
+      "Taught web development fundamentals to children at a bootcamp organized by IPING IT Solutions.",
+      "Focused heavily on JavaScript, guiding students to build interactive web pages.",
+      "Mentored young learners in logical thinking and problem-solving through coding.",
+    ],
+  },
+  {
+    id: "exp_03",
     role: "Web Developer",
     company: "Tanta Innovatives",
     date: "Jun 2024 — Nov 2024",
