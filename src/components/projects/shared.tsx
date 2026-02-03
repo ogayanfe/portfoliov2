@@ -16,6 +16,7 @@ export function FigureContainer({
         emerald: "from-emerald-500/10",
         amber: "from-amber-500/10",
         indigo: "from-indigo-500/10",
+        rose: "from-rose-500/10",
     };
 
     return (
@@ -65,6 +66,7 @@ export function FlowItem({ icon, label, highlight = false, color = "orange" }: {
         emerald: "border-emerald-500/50 bg-emerald-500/10 text-emerald-500",
         amber: "border-amber-500/50 bg-amber-500/10 text-amber-500",
         indigo: "border-indigo-500/50 bg-indigo-500/10 text-indigo-500",
+        rose: "border-rose-500/50 bg-rose-500/10 text-rose-500",
     };
 
     const activeClass = colorClasses[color] || colorClasses.orange;

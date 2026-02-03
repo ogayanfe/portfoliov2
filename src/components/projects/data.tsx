@@ -7,6 +7,7 @@ import BirdieVisual from "./BirdieVisual";
 import BotstoreVisual from "./BotstoreVisual";
 import ChatVisual from "./ChatVisual";
 import TtsServerVisual from "./TtsServerVisual";
+import PortfolioVisual from "./PortfolioVisual";
 
 export const projects = [
   {
@@ -130,5 +131,23 @@ export const projects = [
     ],
     figure: <TtsServerVisual />,
     color: "indigo"
+  },
+  {
+    id: "portfolio-v2",
+    tag: "META // PERSONAL BRAND",
+    title: "Portfolio v2",
+    description: [
+      "The current iteration of my personal portfolio, designed to showcase technical proficiency and aesthetic sensibility.",
+      "Built with a focus on performance, accessibility (a11y), and a rich, terminal-inspired user interface.",
+      "Features a custom-built design system with tailwind css, framer motion animations, and responsive layouts.",
+      "Implements dynamic project galleries, specialized implementation visuals, and polished micro-interactions."
+    ],
+    techStack: ["Next.js 15", "TypeScript", "TailwindCSS", "Framer Motion"],
+    links: [
+        { label: "Source Code", href: "https://github.com/ogayanfe/portfoliov2", primary: true }
+    ],
+    figure: <PortfolioVisual />,
+    color: "rose",
+    gallery: ["/demos/portfoliov2/1.png"]
   }
 ];
