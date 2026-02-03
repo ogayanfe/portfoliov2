@@ -26,7 +26,7 @@ export default function Hero() {
             </div>
             
             <p className="text-lg text-zinc-400 max-w-xl leading-relaxed font-mono text-sm md:text-base border-l-2 border-zinc-800 pl-4">
-                Specializing in building accessible, pixel-perfect, and performant web experiences. Focused on modern React ecosystems and scalable frontend architecture.
+                Specializing in building accessible, pixel-perfect, and performant web experiences. Focused on modern React ecosystems and scalable web architecture.
             </p>
 
             {/* Social Links */}
