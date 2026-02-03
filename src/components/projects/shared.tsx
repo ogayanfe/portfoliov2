@@ -19,14 +19,35 @@ export function FigureContainer({
     };
 
     return (
-        <div className={`flex items-center justify-center min-h-[320px] max-h-[380px] md:max-h-[450px] h-full relative z-10 w-full p-6 overflow-hidden ${className}`}>
-            {/* Unified Background Grid */}
-            <div className="absolute inset-0 bg-[linear-gradient(to_right,#27272a_1px,transparent_1px),linear-gradient(to_bottom,#27272a_1px,transparent_1px)] bg-[size:20px_20px] opacity-10 pointer-events-none" />
+        <div className={`flex items-center justify-center min-h-[320px] max-h-[380px] md:max-h-[450px] h-full relative z-10 w-full p-6 md:p-12 overflow-hidden ${className}`}>
+            {/* Stationary Background Grid - Stays still while board floats */}
+            <div className="absolute inset-0 bg-[linear-gradient(to_right,#18181b_1px,transparent_1px),linear-gradient(to_bottom,#18181b_1px,transparent_1px)] bg-[size:30px_30px] opacity-10 pointer-events-none" />
             
-            {/* Color Accent Gradient */}
-            <div className={`absolute inset-0 bg-gradient-to-br ${colorGradients[color] || 'from-zinc-500/10'} to-transparent`} />
-            
-            {children}
+            {/* The Floating Modular Chassis */}
+            <div className="relative w-full h-full flex items-center justify-center animate-float">
+                
+                {/* Board Frame (The dark thick rectangle casing) */}
+                <div className="absolute inset-0 border-[10px] md:border-[16px] border-zinc-950 bg-zinc-900/40 rounded-sm shadow-[0_20px_50px_rgba(0,0,0,0.5)] overflow-hidden">
+                    {/* Inner Accent Bezel */}
+                    <div className="absolute inset-0 border border-zinc-800/50" />
+                    
+                    {/* Color Accent Gradient (Inside the chassis) */}
+                    <div className={`absolute inset-0 bg-gradient-to-br ${colorGradients[color] || 'from-zinc-500/10'} to-transparent opacity-60`} />
+                    
+                    {/* Technical Markings */}
+                    <div className="absolute top-1 left-2 font-mono text-[7px] text-zinc-600 uppercase tracking-tighter hidden md:block">
+                        SYS_MOD // {color?.toUpperCase()}_STRATUM
+                    </div>
+                    <div className="absolute bottom-1 right-2 font-mono text-[7px] text-zinc-600 uppercase tracking-tighter hidden md:block">
+                        REF_ID: 0x{Math.random().toString(16).slice(2, 6).toUpperCase()}
+                    </div>
+                </div>
+
+                {/* The Actual Content (The project visual) */}
+                <div className="relative z-10 w-full h-full flex items-center justify-center p-4">
+                    {children}
+                </div>
+            </div>
         </div>
     );
 }
