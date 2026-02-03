@@ -12,6 +12,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const nextHost = process.env.PUBLIC_HOST!;
 export const metadata: Metadata = {
   title: "Odule Ayanfeoluwa | Software Developer",
   description: "Web developer specializing in building accessible, pixel-perfect, and performant web experiences. Focused on modern React ecosystems and scalable web architecture.",
@@ -29,11 +30,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Odule Ayanfeoluwa | Software Developer",
     description: "Web developer specializing in building accessible, pixel-perfect, and performant web experiences.",
-    url: "https://ogayanfe.netlify.com", 
+    url: `${nextHost}/`, 
     siteName: "Odule Ayanfeoluwa Portfolio",
     images: [
       {
-        url: "/social.png",
+        url: `${nextHost}/social.png/`,
         width: 1200,
         height: 630,
         alt: "Odule Ayanfeoluwa - Portfolio Preview",
@@ -46,7 +47,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Odule Ayanfeoluwa | Software Developer",
     description: "Web developer specializing in building accessible, pixel-perfect, and performant web experiences.",
-    images: ["/social.png"],
+    images: [`${nextHost}/social.png/`],
     creator: "@ogayanfe", 
   },
 };
