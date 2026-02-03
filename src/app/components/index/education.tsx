@@ -16,14 +16,14 @@ export default function Education() {
       title: "Legacy JavaScript Algorithms and Data Structures",
       issuer: "FreeCodeCamp",
       date: "2024",
-      link: "https://www.freecodecamp.org/certification/ogayanfe/javascript-algorithms-and-data-structures",
+      link: "https://www.freecodecamp.org/certification/O_A_Grandeur/javascript-algorithms-and-data-structures",
       category: "Algorithm Design"
     },
     {
       title: "Responsive Web Design",
       issuer: "FreeCodeCamp",
       date: "2023",
-      link: "https://www.freecodecamp.org/certification/ogayanfe/responsive-web-design",
+      link: "https://www.freecodecamp.org/certification/O_A_Grandeur/responsive-web-design",
       category: "Frontend"
     }
   ];
