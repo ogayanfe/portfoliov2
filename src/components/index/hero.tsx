@@ -63,60 +63,8 @@ export default function Hero() {
          </div>
 
          {/* Right: Code Visualizer */}
-         <div className="relative group">
-            {/* Window Decor */}
-            <div className="rounded-lg border border-zinc-800 bg-zinc-950/90 backdrop-blur-md overflow-hidden shadow-2xl relative z-10 transition-transform duration-500 group-hover:-translate-y-2">
-                {/* Title Bar */}
-                <div className="flex items-center justify-between px-4 py-3 bg-zinc-900/50 border-b border-zinc-800">
-                    <div className="flex gap-2">
-                        <div className="w-3 h-3 rounded-full bg-red-500/20 border border-red-500/50" />
-                        <div className="w-3 h-3 rounded-full bg-yellow-500/20 border border-yellow-500/50" />
-                        <div className="w-3 h-3 rounded-full bg-green-500/20 border border-green-500/50" />
-                    </div>
-                    <div className="text-xs font-mono text-zinc-500 flex items-center gap-2">
-                        <LayoutTemplate size={12} />
-                        components/ui/interface.tsx
-                    </div>
-                    <div className="w-12" /> {/* Spacer */}
-                </div>
-                
-                {/* Code Content */}
-                <div className="p-6 overflow-x-auto text-sm font-mono leading-relaxed">
-                    <div className="flex">
-                        <div className="flex flex-col text-zinc-700 select-none pr-4 text-right border-r border-zinc-900 mr-4 font-mono">
-                            {/* Line numbers */}
-                            <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span>
-                        </div>
-                        <div className="text-zinc-300 whitespace-nowrap">
-                            <div><span className="text-purple-400">import</span> {"{ motion }"} <span className="text-purple-400">from</span> <span className="text-green-400">"framer-motion"</span>;</div>
-                            <div className="h-5" />
-                            <div><span className="text-purple-400">interface</span> <span className="text-yellow-400">Props</span> {"{"}</div>
-                            <div className="pl-4">children: React.ReactNode;</div>
-                            <div className="pl-4">className?: <span className="text-blue-400">string</span>;</div>
-                            <div>{"}"}</div>
-                            <div className="h-5" />
-                            <div><span className="text-purple-400">export const</span> <span className="text-blue-300">GlassPanel</span> = ({"{"} children, className {"}"}: Props) =&gt; (</div>
-                            <div className="pl-4"><span className="text-yellow-400">&lt;motion.div</span></div>
-                            <div className="pl-8">initial=<span className="text-blue-400">{"{{ opacity: 0, y: 20 }}"}</span></div>
-                            <div className="pl-8">animate=<span className="text-blue-400">{"{{ opacity: 1, y: 0 }}"}</span></div>
-                            <div className="pl-8">className={`backdrop-blur-md border border-zinc-800 ${"{"}className{"}"}`}</div>
-                            <div className="pl-4"><span className="text-yellow-400">&gt;</span></div>
-                            <div className="pl-8">{"{"}children{"}"}</div>
-                            <div className="pl-4"><span className="text-yellow-400">&lt;/motion.div&gt;</span></div>
-                            <div>);</div>
-                        </div>
-                    </div>
-                </div>
-                
-                {/* Status Bar */}
-                <div className="px-4 py-2 bg-zinc-900/50 border-t border-zinc-800 flex justify-between items-center text-xs font-mono text-zinc-500">
-                    <div className="flex items-center gap-3">
-                        <span className="flex items-center gap-1 text-blue-400"><Zap size={12} /> TypeScript</span>
-                        <span className="flex items-center gap-1 text-orange-400"> Next.js 15</span>
-                    </div>
-                    <span>Ln 14, Col 2</span>
-                </div>
-            </div>
+         <div className="relative group animate-float">
+            <CodeTerminal />
             
             {/* Glow Behind */}
             <div className="absolute -inset-4 bg-blue-500/10 blur-3xl -z-10 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
@@ -133,4 +81,69 @@ function SocialLink({ icon, href, label, target }: { icon: React.ReactNode; href
       {icon}
     </Link>
   );
+}
+
+function CodeTerminal() {
+    return (
+        <div className="rounded-lg border border-zinc-800 bg-zinc-950/90 backdrop-blur-md overflow-hidden shadow-2xl relative z-10 transition-transform duration-500 group-hover:-translate-y-2">
+            {/* Title Bar */}
+            <div className="flex items-center justify-between px-4 py-3 bg-zinc-900/50 border-b border-zinc-800">
+                <div className="flex gap-2">
+                    <div className="w-3 h-3 rounded-full bg-red-500/20 border border-red-500/50" />
+                    <div className="w-3 h-3 rounded-full bg-yellow-500/20 border border-yellow-500/50" />
+                    <div className="w-3 h-3 rounded-full bg-green-500/20 border border-green-500/50" />
+                </div>
+                <div className="text-xs font-mono text-zinc-500 flex items-center gap-2">
+                    <LayoutTemplate size={12} />
+                    components/ui/interface.tsx
+                </div>
+                <div className="w-12" /> {/* Spacer */}
+            </div>
+            
+            {/* Code Content */}
+            <div className="p-6 overflow-x-auto text-sm font-mono leading-relaxed">
+                <div className="flex">
+                    <div className="flex flex-col text-zinc-700 select-none pr-4 text-right border-r border-zinc-900 mr-4 font-mono">
+                        {/* Line numbers */}
+                        {Array.from({ length: 15 }).map((_, i) => (
+                            <span key={i}>{i + 1}</span>
+                        ))}
+                    </div>
+                    <CodeSnippet />
+                </div>
+            </div>
+            
+            {/* Status Bar */}
+            <div className="px-4 py-2 bg-zinc-900/50 border-t border-zinc-800 flex justify-between items-center text-xs font-mono text-zinc-500">
+                <div className="flex items-center gap-3">
+                    <span className="flex items-center gap-1 text-blue-400"><Zap size={12} /> TypeScript</span>
+                    <span className="flex items-center gap-1 text-orange-400"> Next.js 15</span>
+                </div>
+                <span>Ln 14, Col 2</span>
+            </div>
+        </div>
+    );
+}
+
+function CodeSnippet() {
+    return (
+        <div className="text-zinc-300 whitespace-nowrap">
+            <div><span className="text-purple-400">import</span> {"{ motion }"} <span className="text-purple-400">from</span> <span className="text-green-400">"framer-motion"</span>;</div>
+            <div className="h-5" />
+            <div><span className="text-purple-400">interface</span> <span className="text-yellow-400">Props</span> {"{"}</div>
+            <div className="pl-4">children: React.ReactNode;</div>
+            <div className="pl-4">className?: <span className="text-blue-400">string</span>;</div>
+            <div>{"}"}</div>
+            <div className="h-5" />
+            <div><span className="text-purple-400">export const</span> <span className="text-blue-300">GlassPanel</span> = ({"{"} children, className {"}"}: Props) =&gt; (</div>
+            <div className="pl-4"><span className="text-yellow-400">&lt;motion.div</span></div>
+            <div className="pl-8">initial=<span className="text-blue-400">{"{{ opacity: 0, y: 20 }}"}</span></div>
+            <div className="pl-8">animate=<span className="text-blue-400">{"{{ opacity: 1, y: 0 }}"}</span></div>
+            <div className="pl-8">className={`backdrop-blur-md border border-zinc-800 ${"{"}className{"}"}`}</div>
+            <div className="pl-4"><span className="text-yellow-400">&gt;</span></div>
+            <div className="pl-8">{"{"}children{"}"}</div>
+            <div className="pl-4"><span className="text-yellow-400">&lt;/motion.div&gt;</span></div>
+            <div>);</div>
+        </div>
+    );
 }

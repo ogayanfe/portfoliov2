@@ -64,7 +64,7 @@ export default function Hackathon() {
             </div>
 
             {/* Certificate Visual */}
-            <div className="relative group">
+            <div className="relative group animate-float">
                 <div className="absolute inset-0 bg-gradient-to-tr from-purple-500/20 to-orange-500/20 rounded-lg blur-xl opacity-50 group-hover:opacity-75 transition-opacity" />
                 <div className="relative rounded-lg border border-zinc-800 bg-zinc-900/50 p-2 backdrop-blur-sm overflow-hidden shadow-2xl skew-y-1 group-hover:skew-y-0 transition-transform duration-700 ease-out">
                     <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500" />
