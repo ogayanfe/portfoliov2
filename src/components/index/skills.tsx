@@ -10,10 +10,10 @@ export default function Skills() {
                 </div>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <SkillCategory title="Languages & Runtime" items={["TypeScript", "Python 3.12+", "Node.js", "Java", "SQL"]} />
-                    <SkillCategory title="Backend Infra" items={["FastAPI", "Next.js (App Router)", "PostgreSQL", "Redis", "Docker", "Nginx"]} />
-                    <SkillCategory title="Frontend Arch" items={["React (RSC)", "Tailwind CSS", "Framer Motion", "React Query", "Zustand"]} />
-                    <SkillCategory title="AI & Data" items={["Gemini API", "LangChain", "OpenAI", "Pandas", "Vector DBs"]} />
+                    <SkillCategory title="Languages & Runtime" items={["TypeScript", "Python 3", "Solidity", "Golang", "C++", "SQL"]} />
+                    <SkillCategory title="Frontend Arch" items={["React (RSC)", "React Query","NextJs", "ScaffoldEth", "TailwindCSS", "FramerMotion"]} />
+                    <SkillCategory title="Backend Infra" items={["Django", "Flask",  "NextJs", "PostgreSQL", "Redis", "Docker", "Nginx"]} />
+                    <SkillCategory title="AI & Data" items={["Gemini API", "OpenAI", "Numpy", "OpenCV", "Vector DBs"]} />
                 </div>
             </div>
         </section>
